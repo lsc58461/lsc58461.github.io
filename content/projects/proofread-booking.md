@@ -1,7 +1,7 @@
 ---
 title: 선착순 첨삭 신청 시스템
 tagline: 동시 접속 부하를 견디는 선착순 예약 웹앱
-category: web
+categories: [web]
 year: "2026"
 role: 개발 · 배포 (외주)
 client: 개인 의뢰인 (비공개)

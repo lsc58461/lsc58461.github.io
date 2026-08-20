@@ -1,7 +1,7 @@
 ---
 title: 커뮤니티 AI 자동 댓글 시스템
 tagline: 사이트 API 리버싱 + LLM 문맥 댓글 + 캡차 대응
-category: ai
+categories: [ai, automation, reversing]
 year: "2026"
 role: 개발 (외주 · 다건)
 client: 커뮤니티 운영/이용자 (비공개)

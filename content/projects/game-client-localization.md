@@ -1,7 +1,7 @@
 ---
 title: 게임 클라이언트 로컬라이징 툴체인
 tagline: 암호화 컨테이너 리버싱 → 텍스트 추출 → 런타임 오버라이드 재주입
-category: reversing
+categories: [reversing, desktop]
 year: "2026"
 role: 리버스 엔지니어링 · 툴 개발 (외주)
 client: 온라인 게임 사설 서버 운영자 (비공개)

@@ -4,15 +4,33 @@ import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import type { Category, Project, ProjectMeta } from "./types";
+import { isCategory, sortCategories } from "./types";
 
 const PROJECT_DIR = path.join(process.cwd(), "content", "projects");
+
+/**
+ * Accepts `categories: [a, b]` (preferred) or a single legacy `category: a`.
+ * Unknown values are dropped; an empty result falls back to "web" so a typo
+ * never makes a project vanish from every filter.
+ */
+function readCategories(data: Record<string, unknown>): Category[] {
+  const raw = Array.isArray(data.categories)
+    ? data.categories
+    : [data.categories, data.category];
+
+  const seen = new Set<Category>();
+  for (const v of raw) {
+    if (isCategory(v)) seen.add(v);
+  }
+  return seen.size ? sortCategories([...seen]) : ["web"];
+}
 
 function coerce(data: Record<string, unknown>, slug: string): ProjectMeta {
   return {
     slug,
     title: String(data.title ?? slug),
     tagline: String(data.tagline ?? ""),
-    category: (data.category as Category) ?? "web",
+    categories: readCategories(data),
     year: String(data.year ?? ""),
     role: String(data.role ?? ""),
     client: String(data.client ?? ""),

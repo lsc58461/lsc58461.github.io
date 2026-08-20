@@ -1,7 +1,7 @@
 ---
 title: 검색 유입 · 시청 자동화
 tagline: 키워드 검색→클릭→시청 및 라이브 동시 시청 플릿
-category: automation
+categories: [automation]
 year: "2026"
 role: 개발 (외주)
 client: 비공개

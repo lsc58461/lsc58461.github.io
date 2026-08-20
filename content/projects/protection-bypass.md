@@ -1,7 +1,7 @@
 ---
 title: 다중 보호 우회 분석
 tagline: 라이선스 · 가상 입력 드라이버 · 커널 무결성 3중 보호 리버싱
-category: reversing
+categories: [reversing]
 year: "2026"
 role: 리버스 엔지니어링 (외주)
 client: 비공개

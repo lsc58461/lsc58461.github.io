@@ -1,7 +1,7 @@
 ---
 title: Rift Lens
 tagline: 리그 오브 레전드 매칭 실력대 추정 웹 서비스
-category: web
+categories: [web, data]
 year: "2026"
 role: 기획 · 개발 · 운영 (개인 프로젝트)
 client: 개인 프로젝트

@@ -1,7 +1,7 @@
 ---
 title: 제조 QR → 출하 라벨 자동 출력
 tagline: 도장품 QR 스캔 → 매칭표 조회 → ZPL 라벨 자동 인쇄
-category: automation
+categories: [automation, desktop]
 year: "2026"
 role: 개발 (외주)
 client: 제조업체 (비공개)

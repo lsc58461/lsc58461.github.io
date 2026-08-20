@@ -1,7 +1,7 @@
 ---
 title: 웹 데이터 수집 파이프라인
 tagline: 검색 기반 이메일·연락처·장소·공장 데이터 대량 수집
-category: data
+categories: [data, automation]
 year: "2026"
 role: 개발 (외주 · 다건)
 client: 마케팅/영업 실무자 (비공개)

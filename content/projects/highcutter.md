@@ -1,7 +1,7 @@
 ---
 title: Highcutter
 tagline: AI 영화 하이라이트 자동 추출 데스크톱 앱
-category: desktop
+categories: [desktop, ai]
 year: "2026"
 role: 기획 · 개발 (개인 프로젝트)
 client: 개인 프로젝트

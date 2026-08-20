@@ -1,7 +1,7 @@
 ---
 title: 팝언더 광고 차단 확장
 tagline: 회전 도메인 팝언더를 잡는 MV3 크롬 확장
-category: web
+categories: [web, reversing]
 year: "2026"
 role: 개발 (개인 프로젝트)
 client: 개인 프로젝트

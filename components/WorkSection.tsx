@@ -3,20 +3,25 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Project, Category } from "@/lib/types";
-import { CATEGORY_LABEL } from "@/lib/types";
+import { CATEGORY_LABEL, CATEGORY_ORDER } from "@/lib/types";
 
-const ORDER: (Category | "all")[] = ["all", "reversing", "automation", "web", "ai", "data", "desktop"];
+const ORDER: (Category | "all")[] = ["all", ...CATEGORY_ORDER];
 const LABEL: Record<string, string> = { all: "전체", ...CATEGORY_LABEL };
 
 function FeaturedCard({ p, i }: { p: Project; i: number }) {
   return (
     <Link href={`/projects/${p.slug}`} className="rise block group" style={{ animationDelay: `${i * 70}ms` }}>
       <article className="card h-full p-7 flex flex-col">
-        <div className="flex items-center justify-between mb-5">
-          <span className="eyebrow" style={{ color: "var(--accent-dim)" }}>
-            {CATEGORY_LABEL[p.category]}
-          </span>
-          <span className="mono text-[11px]" style={{ color: "var(--fg-faint)" }}>
+        <div className="flex items-start justify-between gap-4 mb-5">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0">
+            {p.categories.map((c, ci) => (
+              <span key={c} className="eyebrow" style={{ color: "var(--accent-dim)" }}>
+                {ci > 0 && <span style={{ opacity: 0.4, marginRight: 8 }}>/</span>}
+                {CATEGORY_LABEL[c]}
+              </span>
+            ))}
+          </div>
+          <span className="mono text-[11px] shrink-0" style={{ color: "var(--fg-faint)" }}>
             {p.year}
           </span>
         </div>
@@ -85,15 +90,15 @@ function ProjectRow({ p, i }: { p: Project; i: number }) {
             {p.stack.slice(0, 4).join(" · ")}
           </div>
           <div className="mono text-[10.5px] mt-2 sm:hidden" style={{ color: "var(--fg-faint)" }}>
-            {CATEGORY_LABEL[p.category]} · {p.year}
+            {p.categories.map((c) => CATEGORY_LABEL[c]).join(" · ")} · {p.year}
           </div>
         </div>
 
         <div className="hidden sm:flex flex-col items-end gap-1.5 shrink-0 pt-0.5">
-          <span className="text-[11px]" style={{ color: "var(--fg-faint)" }}>
-            {CATEGORY_LABEL[p.category]}
+          <span className="text-[11px] text-right" style={{ color: "var(--fg-faint)" }}>
+            {p.categories.map((c) => CATEGORY_LABEL[c]).join(" · ")}
           </span>
-          <span className="mono text-[11px]" style={{ color: "var(--fg-faint)" }}>
+          <span className="mono text-[11px] shrink-0" style={{ color: "var(--fg-faint)" }}>
             {p.year}
           </span>
         </div>
@@ -107,11 +112,14 @@ export function WorkSection({ featured, rest }: { featured: Project[]; rest: Pro
 
   const counts = useMemo(() => {
     const c: Record<string, number> = { all: rest.length };
-    for (const p of rest) c[p.category] = (c[p.category] ?? 0) + 1;
+    for (const p of rest) {
+      for (const cat of p.categories) c[cat] = (c[cat] ?? 0) + 1;
+    }
     return c;
   }, [rest]);
 
-  const shown = active === "all" ? rest : rest.filter((p) => p.category === active);
+  const shown =
+    active === "all" ? rest : rest.filter((p) => p.categories.includes(active));
 
   return (
     <section id="work" className="container-x scroll-mt-16 pb-4">

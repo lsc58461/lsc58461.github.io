@@ -1,7 +1,7 @@
 ---
 title: 숏폼 편집 자동화 도구 2종
 tagline: 대본-영상 자동 매칭 + 자막 기반 소스 검색
-category: automation
+categories: [automation, ai, desktop, reversing]
 year: "2026"
 role: 개발 (외주)
 client: 정치 숏폼 채널 운영자 (비공개)

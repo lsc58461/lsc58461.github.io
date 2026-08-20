@@ -1,7 +1,7 @@
 ---
 title: Insta Promo Studio
 tagline: 프로젝트 폴더 → 인스타 홍보 캐러셀 자동 생성 앱
-category: desktop
+categories: [desktop, ai]
 year: "2026"
 role: 기획 · 개발 (개인 프로젝트)
 client: 개인 프로젝트

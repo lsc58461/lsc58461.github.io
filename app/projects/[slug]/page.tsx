@@ -44,8 +44,13 @@ export default async function ProjectPage({
           </Link>
 
           {/* title block */}
-          <div className="eyebrow mb-4" style={{ color: "var(--accent-dim)" }}>
-            {CATEGORY_LABEL[project.category]}
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-4">
+            {project.categories.map((c, i) => (
+              <span key={c} className="eyebrow" style={{ color: "var(--accent-dim)" }}>
+                {i > 0 && <span style={{ opacity: 0.4, marginRight: 8 }}>/</span>}
+                {CATEGORY_LABEL[c]}
+              </span>
+            ))}
           </div>
           <h1
             className="font-semibold"

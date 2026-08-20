@@ -1,7 +1,7 @@
 ---
 title: 공공시설 예약 자동화
 tagline: 테니스장 · 축구장 등 선착순 대관 HTTP 예약 매크로
-category: automation
+categories: [automation, reversing]
 year: "2026"
 role: 프로토콜 분석 · 개발 (외주 · 다건)
 client: 개인 의뢰인 다수 (비공개)

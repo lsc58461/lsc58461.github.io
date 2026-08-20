@@ -1,7 +1,7 @@
 ---
 title: 해외 소싱 크롤러
 tagline: 상품 상세 · 다중 검색 · 블랙리스트 · 표준 양식 엑셀
-category: data
+categories: [data, automation]
 year: "2026"
 role: 설계 · 개발 (외주)
 client: 소싱 사업자 (비공개)
