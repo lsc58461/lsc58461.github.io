@@ -13,14 +13,11 @@ export function Header() {
       <div className="container-x flex items-center justify-between h-14">
         <Link href="/" className="text-[14px] font-semibold" style={{ letterSpacing: "-0.01em" }}>
           {SITE.name}
-          <span className="mono ml-2 text-[11px]" style={{ color: "var(--fg-faint)" }}>
-            {SITE.handle}
-          </span>
         </Link>
         <nav className="flex items-center gap-6 text-[13px]" style={{ color: "var(--fg-dim)" }}>
           <a href="/#work" className="hover:text-white transition-colors">작업</a>
           <a href="/#about" className="hover:text-white transition-colors">강점</a>
-          <a href={`mailto:${SITE.email}`} className="hover:text-white transition-colors">연락</a>
+          <a href="/#contact" className="hover:text-white transition-colors">연락</a>
         </nav>
       </div>
     </header>

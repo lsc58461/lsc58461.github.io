@@ -1,4 +1,5 @@
 import { SITE } from "@/lib/site";
+import { Contact } from "./Contact";
 
 export function Footer() {
   return (
@@ -14,15 +15,18 @@ export function Footer() {
           <a href={SITE.soomgo} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
             숨고
           </a>
-          <a href={`mailto:${SITE.email}`} className="mono hover:text-white transition-colors">
-            {SITE.email}
-          </a>
-          <a
-            href={`tel:${SITE.phone.replace(/-/g, "")}`}
+          <Contact
+            kind="email"
+            encoded={SITE.emailEncoded}
+            placeholder={SITE.emailPlaceholder}
             className="mono hover:text-white transition-colors"
-          >
-            {SITE.phone}
-          </a>
+          />
+          <Contact
+            kind="tel"
+            encoded={SITE.phoneEncoded}
+            placeholder={SITE.phonePlaceholder}
+            className="mono hover:text-white transition-colors"
+          />
         </div>
       </div>
     </footer>

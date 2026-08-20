@@ -3,6 +3,7 @@ import { SITE } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WorkSection } from "@/components/WorkSection";
+import { Contact } from "@/components/Contact";
 
 export default function Home() {
   const projects = getAllProjects();
@@ -59,7 +60,7 @@ export default function Home() {
                 작업 보기
               </a>
               <a
-                href={`mailto:${SITE.email}`}
+                href="#contact"
                 className="text-sm px-5 py-2.5 rounded-lg border transition-colors hover:border-[#333844]"
                 style={{ borderColor: "var(--border)", color: "var(--fg-dim)" }}
               >
@@ -127,7 +128,7 @@ export default function Home() {
         </section>
 
         {/* ---------- CONTACT ---------- */}
-        <section className="container-x pb-24">
+        <section id="contact" className="container-x pb-24 scroll-mt-16">
           <div className="card p-9 sm:p-11 text-center">
             <h3 className="text-xl sm:text-2xl font-semibold" style={{ letterSpacing: "-0.02em" }}>
               함께 만들 것이 있으신가요?
@@ -136,21 +137,21 @@ export default function Home() {
               자동화 · 리버싱 · 웹/데스크톱 제품 문의를 환영합니다.
             </p>
             <div className="mt-7 flex flex-col items-center gap-4">
-              <a
-                href={`mailto:${SITE.email}`}
-                className="mono text-sm px-6 py-3 rounded-lg font-medium transition-opacity hover:opacity-90"
+              <Contact
+                kind="email"
+                encoded={SITE.emailEncoded}
+                placeholder={SITE.emailPlaceholder}
+                className="mono text-sm px-6 py-3 rounded-lg font-medium transition-opacity hover:opacity-90 inline-block"
                 style={{ background: "var(--accent)", color: "#0a0b0e" }}
-              >
-                {SITE.email}
-              </a>
+              />
               <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[13px]">
-                <a
-                  href={`tel:${SITE.phone.replace(/-/g, "")}`}
+                <Contact
+                  kind="tel"
+                  encoded={SITE.phoneEncoded}
+                  placeholder={SITE.phonePlaceholder}
                   className="mono transition-colors hover:text-white"
                   style={{ color: "var(--fg-dim)" }}
-                >
-                  {SITE.phone}
-                </a>
+                />
                 <span aria-hidden style={{ color: "var(--fg-faint)", opacity: 0.5 }}>·</span>
                 <a
                   href={SITE.soomgo}

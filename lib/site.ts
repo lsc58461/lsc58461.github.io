@@ -5,10 +5,13 @@ export const SITE = {
   tagline: "리버스 엔지니어링 · 자동화 · 풀스택",
   intro:
     "웹·데스크톱 제품부터 프로토콜 리버싱과 안티봇 우회까지, '되게 만드는' 일을 합니다. 남들이 API 문서가 없다고 멈추는 지점에서 네트워크를 뜯어 계약을 복원하고, 그 위에 안정적으로 돌아가는 제품을 올립니다.",
-  email: "lsc58461@gmail.com",
+  /** reversed + base64 so the plain address never lands in the built HTML */
+  emailEncoded: "bW9jLmxpYW1nQDE2NDg1Y3Ns",
+  emailPlaceholder: "lsc58461 [at] gmail [dot] com",
   github: "https://github.com/lsc58461",
   soomgo: "https://soomgo.com/profile/users/672487",
-  phone: "010-8266-3635",
+  phoneEncoded: "NTM2My02NjI4LTAxMA==",
+  phonePlaceholder: "010 · 8266 · 3635",
   strengths: [
     {
       title: "리버스 엔지니어링",
