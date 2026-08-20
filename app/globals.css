@@ -1,26 +1,123 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #08090c;
+  --bg-soft: #0e1015;
+  --panel: #12151c;
+  --panel-2: #171b24;
+  --border: #232935;
+  --border-soft: #1b2029;
+  --fg: #e8eaf0;
+  --fg-dim: #9aa2b4;
+  --fg-faint: #5f6678;
+  --accent: #5eead4;
+  --accent-2: #38bdf8;
+  --accent-warm: #fbbf24;
+  --radius: 14px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-fg: var(--fg);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border-soft);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(60rem 40rem at 75% -10%, rgba(56, 189, 248, 0.08), transparent 60%),
+    radial-gradient(50rem 40rem at 10% 10%, rgba(94, 234, 212, 0.06), transparent 55%);
+  pointer-events: none;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(var(--border-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, #000 30%, transparent 75%);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.mono { font-family: var(--font-mono), ui-monospace, "SFMono-Regular", monospace; }
+
+.container-x {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  color: var(--fg-dim);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  line-height: 1;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--panel), var(--bg-soft));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px -24px rgba(94, 234, 212, 0.35);
+}
+
+.accent-text { color: var(--accent); }
+
+.prose-body { color: var(--fg-dim); line-height: 1.75; font-size: 15.5px; }
+.prose-body h2 { color: var(--fg); font-size: 20px; font-weight: 650; margin-top: 2.2em; margin-bottom: 0.6em; letter-spacing: -0.01em; }
+.prose-body h3 { color: var(--fg); font-size: 16px; font-weight: 600; margin-top: 1.6em; margin-bottom: 0.5em; }
+.prose-body p { margin-bottom: 1.1em; }
+.prose-body ul { margin: 0.4em 0 1.3em; padding-left: 0; list-style: none; }
+.prose-body li { position: relative; padding-left: 1.4em; margin-bottom: 0.55em; }
+.prose-body li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+.prose-body strong { color: var(--fg); font-weight: 620; }
+.prose-body blockquote { border-left: 2px solid var(--accent); padding: 0.2em 0 0.2em 1em; margin: 1.4em 0; color: var(--fg-faint); font-size: 14px; }
+.prose-body code { font-family: var(--font-mono), monospace; font-size: 0.86em; background: var(--panel-2); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; color: var(--accent); }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise { animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
