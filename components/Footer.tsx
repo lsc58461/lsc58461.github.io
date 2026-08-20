@@ -11,8 +11,17 @@ export function Footer() {
           <a href={SITE.github} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
             GitHub
           </a>
+          <a href={SITE.soomgo} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+            숨고
+          </a>
           <a href={`mailto:${SITE.email}`} className="mono hover:text-white transition-colors">
             {SITE.email}
+          </a>
+          <a
+            href={`tel:${SITE.phone.replace(/-/g, "")}`}
+            className="mono hover:text-white transition-colors"
+          >
+            {SITE.phone}
           </a>
         </div>
       </div>
