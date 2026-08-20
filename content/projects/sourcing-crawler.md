@@ -4,7 +4,7 @@ tagline: 상품 상세 · 다중 검색 · 블랙리스트 · 표준 양식 엑�
 categories: [data, automation]
 year: "2026"
 role: 설계 · 개발 (외주)
-client: 소싱 사업자 (비공개)
+client: 비공개
 status: 설계 확정
 featured: false
 order: 15

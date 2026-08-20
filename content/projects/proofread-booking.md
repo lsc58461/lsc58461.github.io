@@ -4,7 +4,7 @@ tagline: 동시 접속 부하를 견디는 선착순 예약 웹앱
 categories: [web]
 year: "2026"
 role: 개발 · 배포 (외주)
-client: 개인 의뢰인 (비공개)
+client: 비공개
 status: 배포 완료
 featured: false
 order: 14

@@ -4,7 +4,8 @@ export type Category =
   | "reversing"
   | "ai"
   | "data"
-  | "desktop";
+  | "desktop"
+  | "infra";
 
 export interface ProjectMeta {
   slug: string;
@@ -36,6 +37,7 @@ export const CATEGORY_LABEL: Record<Category, string> = {
   ai: "AI",
   data: "데이터",
   desktop: "데스크톱",
+  infra: "인프라",
 };
 
 /** Display order for filter chips and category lists. */
@@ -46,6 +48,7 @@ export const CATEGORY_ORDER: Category[] = [
   "ai",
   "data",
   "desktop",
+  "infra",
 ];
 
 export const isCategory = (v: unknown): v is Category =>

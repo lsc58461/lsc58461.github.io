@@ -4,7 +4,7 @@ tagline: 도장품 QR 스캔 → 매칭표 조회 → ZPL 라벨 자동 인쇄
 categories: [automation, desktop]
 year: "2026"
 role: 개발 (외주)
-client: 제조업체 (비공개)
+client: 비공개
 status: 납품 완료
 featured: false
 order: 16

@@ -1,10 +1,10 @@
 ---
-title: 공공시설 예약 자동화
-tagline: 테니스장 · 축구장 등 선착순 대관 HTTP 예약 매크로
+title: 예약 시스템 클라이언트 자동화
+tagline: 레거시 예약 시스템의 조회·신청 흐름 HTTP 구현
 categories: [automation, reversing]
 year: "2026"
 role: 프로토콜 분석 · 개발 (외주 · 다건)
-client: 개인 의뢰인 다수 (비공개)
+client: 비공개
 status: 납품 / 진행
 featured: false
 order: 6

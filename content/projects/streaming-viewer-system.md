@@ -4,7 +4,7 @@ tagline: 스트리밍 플랫폼 동시 시청자 카운트 메커니즘 리버�
 categories: [reversing, automation]
 year: "2026"
 role: 프로토콜 분석 · 시스템 설계 · 구현 (외주)
-client: 국내 스트리밍 플랫폼 대상 (의뢰인 비공개)
+client: 비공개
 status: 납품 완료
 featured: true
 order: 2

@@ -1,10 +1,10 @@
 ---
-title: 대학 수강신청 자동화
-tagline: 대기열 · 개발자도구 탐지 우회 순수 HTTP 신청
+title: 신청 시스템 클라이언트 구현
+tagline: 대기열·클라이언트 탐지 구조 분석과 순수 HTTP 클라이언트
 categories: [automation, reversing]
 year: "2026"
 role: 프로토콜 분석 · 개발 (외주 · 다건)
-client: 재학생 의뢰인 (비공개)
+client: 비공개
 status: 납품 / 검증 완료
 featured: false
 order: 8

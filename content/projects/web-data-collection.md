@@ -4,7 +4,7 @@ tagline: 검색 기반 이메일·연락처·장소·공장 데이터 대량 수
 categories: [data, automation]
 year: "2026"
 role: 개발 (외주 · 다건)
-client: 마케팅/영업 실무자 (비공개)
+client: 비공개
 status: 납품 / 실측
 featured: false
 order: 12

@@ -4,7 +4,7 @@ tagline: 암호화 컨테이너 리버싱 → 텍스트 추출 → 런타임 오
 categories: [reversing, desktop]
 year: "2026"
 role: 리버스 엔지니어링 · 툴 개발 (외주)
-client: 온라인 게임 사설 서버 운영자 (비공개)
+client: 비공개
 status: 추출·재주입 완료
 featured: true
 order: 4
