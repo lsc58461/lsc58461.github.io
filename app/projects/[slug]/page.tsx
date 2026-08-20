@@ -33,74 +33,118 @@ export default async function ProjectPage({
   return (
     <>
       <Header />
-      <main className="flex-1 pt-12 pb-4">
-        <div className="container-x" style={{ maxWidth: 820 }}>
-          <Link href="/#work" className="mono text-xs inline-flex items-center gap-1.5 mb-8 hover:text-white transition-colors"
-            style={{ color: "var(--fg-dim)" }}>
-            ← 전체 작업
+      <main className="flex-1 pt-14 pb-24">
+        <div className="container-x" style={{ maxWidth: 760 }}>
+          <Link
+            href="/#work"
+            className="text-[13px] inline-flex items-center gap-2 mb-12 transition-colors hover:text-white"
+            style={{ color: "var(--fg-faint)" }}
+          >
+            <span aria-hidden>←</span> 작업 목록
           </Link>
 
-          <div className="flex flex-wrap items-center gap-2 mb-5">
-            <span className="tag accent-text">{CATEGORY_LABEL[project.category]}</span>
-            <span className="tag">{project.year}</span>
-            <span className="tag">{project.status}</span>
+          {/* title block */}
+          <div className="eyebrow mb-4" style={{ color: "var(--accent-dim)" }}>
+            {CATEGORY_LABEL[project.category]}
           </div>
+          <h1
+            className="font-semibold"
+            style={{ fontSize: "clamp(1.7rem, 4vw, 2.3rem)", lineHeight: 1.25, letterSpacing: "-0.025em" }}
+          >
+            {project.title}
+          </h1>
+          <p className="mt-3.5 text-[15.5px] leading-relaxed" style={{ color: "var(--fg-dim)" }}>
+            {project.tagline}
+          </p>
 
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">{project.title}</h1>
-          <p className="mt-3 text-lg" style={{ color: "var(--fg-dim)" }}>{project.tagline}</p>
-
-          {/* meta grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-8">
+          {/* meta strip */}
+          <dl
+            className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-5 py-6 border-y"
+            style={{ borderColor: "var(--border-soft)" }}
+          >
             {[
-              { k: "역할", v: project.role },
-              { k: "클라이언트", v: project.client },
+              { k: "연도", v: project.year },
+              { k: "역할", v: project.role.replace(/\s*\([^)]*\)\s*/g, "").trim() },
+              { k: "구분", v: project.client },
               { k: "상태", v: project.status },
             ].map((m) => (
-              <div key={m.k} className="card p-4">
-                <div className="mono text-[11px] mb-1" style={{ color: "var(--fg-faint)" }}>{m.k}</div>
-                <div className="text-sm" style={{ color: "var(--fg)" }}>{m.v}</div>
+              <div key={m.k}>
+                <dt className="eyebrow mb-1.5">{m.k}</dt>
+                <dd className="text-[13.5px] leading-snug" style={{ color: "var(--fg)" }}>
+                  {m.v}
+                </dd>
               </div>
             ))}
-          </div>
+          </dl>
 
           {/* metrics */}
           {project.metrics.length > 0 && (
-            <div className="grid grid-cols-3 gap-3 mt-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8">
               {project.metrics.map((m) => (
-                <div key={m.label} className="card p-4 text-center">
-                  <div className="text-lg font-bold mono" style={{ color: "var(--accent)" }}>{m.value}</div>
-                  <div className="text-[11px] mt-1" style={{ color: "var(--fg-faint)" }}>{m.label}</div>
+                <div key={m.label} className="card p-5 flex flex-col justify-center min-h-[92px]">
+                  <div
+                    className="font-semibold leading-snug"
+                    style={{ fontSize: 15, color: "var(--accent)", letterSpacing: "-0.01em" }}
+                  >
+                    {m.value}
+                  </div>
+                  <div className="text-[11.5px] mt-2" style={{ color: "var(--fg-faint)" }}>
+                    {m.label}
+                  </div>
                 </div>
               ))}
             </div>
           )}
 
           {/* stack */}
-          <div className="flex flex-wrap gap-2 mt-8">
+          <div className="flex flex-wrap gap-1.5 mt-8">
             {project.stack.map((s) => (
-              <span key={s} className="mono text-xs px-2.5 py-1 rounded-md"
-                style={{ background: "var(--panel-2)", border: "1px solid var(--border-soft)", color: "var(--fg-dim)" }}>
+              <span
+                key={s}
+                className="mono text-[11.5px] px-2.5 py-1.5 rounded-md"
+                style={{
+                  background: "var(--panel)",
+                  border: "1px solid var(--border-soft)",
+                  color: "var(--fg-dim)",
+                }}
+              >
                 {s}
               </span>
             ))}
           </div>
 
-          <hr className="my-10" style={{ borderColor: "var(--border-soft)" }} />
-
           {/* body */}
-          <article className="prose-body" dangerouslySetInnerHTML={{ __html: project.bodyHtml }} />
+          <article
+            className="prose-body mt-14"
+            dangerouslySetInnerHTML={{ __html: project.bodyHtml }}
+          />
 
           {project.links.length > 0 && (
-            <div className="flex flex-wrap gap-3 mt-10">
+            <div className="flex flex-wrap gap-2.5 mt-12">
               {project.links.map((l) => (
-                <a key={l.href} href={l.href} target="_blank" rel="noreferrer"
-                  className="mono text-sm px-4 py-2 rounded-lg border"
-                  style={{ borderColor: "var(--border)", color: "var(--accent)" }}>
+                <a
+                  key={l.href}
+                  href={l.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[13px] px-4 py-2.5 rounded-lg border transition-colors hover:border-[#333844]"
+                  style={{ borderColor: "var(--border)", color: "var(--accent)" }}
+                >
                   {l.label} ↗
                 </a>
               ))}
             </div>
           )}
+
+          <div className="mt-16 pt-8 border-t" style={{ borderColor: "var(--border-soft)" }}>
+            <Link
+              href="/#work"
+              className="text-[13px] transition-colors hover:text-white"
+              style={{ color: "var(--fg-faint)" }}
+            >
+              ← 다른 작업 보기
+            </Link>
+          </div>
         </div>
       </main>
       <Footer />

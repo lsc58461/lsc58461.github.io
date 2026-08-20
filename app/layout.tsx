@@ -4,13 +4,13 @@ import "./globals.css";
 import { SITE } from "@/lib/site";
 
 const sans = Space_Grotesk({
-  variable: "--font-sans",
+  variable: "--font-latin",
   subsets: ["latin"],
   display: "swap",
 });
 
 const mono = JetBrains_Mono({
-  variable: "--font-mono",
+  variable: "--font-mono-latin",
   subsets: ["latin"],
   display: "swap",
 });
@@ -37,6 +37,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`${sans.variable} ${mono.variable} h-full`}>
+      <head>
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

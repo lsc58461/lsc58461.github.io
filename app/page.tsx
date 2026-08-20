@@ -6,121 +6,140 @@ import { WorkSection } from "@/components/WorkSection";
 
 export default function Home() {
   const projects = getAllProjects();
-  const featured = projects.filter((p) => p.featured);
-  const stats = [
-    { value: `${projects.length}+`, label: "프로젝트" },
-    { value: "6", label: "도메인" },
-    { value: "실서비스", label: "운영 경험" },
-  ];
+  const featured = projects.filter((p) => p.featured).slice(0, 4);
+  const rest = projects.filter((p) => !featured.includes(p));
 
   return (
     <>
       <Header />
-      <main className="flex-1 flex flex-col gap-24 pt-16 pb-4">
-        {/* HERO */}
-        <section className="container-x">
-          <div className="rise">
-            <div className="tag mb-6">
-              <span style={{ width: 7, height: 7, borderRadius: 99, background: "var(--accent)", display: "inline-block" }} />
-              작업 의뢰 가능 · 숨고 · 개인 외주
+      <main className="flex-1">
+        {/* ---------- HERO ---------- */}
+        <section className="container-x pt-16 pb-20 sm:pt-24 sm:pb-28">
+          <div className="rise max-w-3xl">
+            <div className="chip mb-8">
+              <span
+                aria-hidden
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: 99,
+                  background: "var(--accent)",
+                  boxShadow: "0 0 0 3px rgba(125,211,192,0.15)",
+                }}
+              />
+              작업 의뢰 가능
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.05]">
-              {SITE.tagline.split(" · ").map((w, i) => (
-                <span key={w}>
-                  {i > 0 && <span style={{ color: "var(--fg-faint)" }}> · </span>}
-                  <span style={{ color: i === 0 ? "var(--accent)" : "var(--fg)" }}>{w}</span>
-                </span>
-              ))}
+
+            <h1
+              className="font-semibold"
+              style={{
+                fontSize: "clamp(2.1rem, 5.2vw, 3.4rem)",
+                lineHeight: 1.22,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              문서 없는 시스템을 열어
+              <br />
+              <span className="accent-text">돌아가는 제품</span>으로 만듭니다.
             </h1>
-            <p className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed" style={{ color: "var(--fg-dim)" }}>
+
+            <p
+              className="mt-7 text-[15.5px] sm:text-base leading-[1.85] max-w-2xl"
+              style={{ color: "var(--fg-dim)" }}
+            >
               {SITE.intro}
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#work" className="mono text-sm px-5 py-2.5 rounded-lg font-medium"
-                style={{ background: "var(--accent)", color: "var(--bg)" }}>
-                작업 보기 →
+
+            <div className="mt-9 flex flex-wrap items-center gap-2.5">
+              <a
+                href="#work"
+                className="text-sm px-5 py-2.5 rounded-lg font-medium transition-opacity hover:opacity-90"
+                style={{ background: "var(--accent)", color: "#0a0b0e" }}
+              >
+                작업 보기
               </a>
-              <a href={SITE.github} target="_blank" rel="noreferrer"
-                className="mono text-sm px-5 py-2.5 rounded-lg border"
-                style={{ borderColor: "var(--border)", color: "var(--fg-dim)" }}>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="text-sm px-5 py-2.5 rounded-lg border transition-colors hover:border-[#333844]"
+                style={{ borderColor: "var(--border)", color: "var(--fg-dim)" }}
+              >
+                연락하기
+              </a>
+              <a
+                href={SITE.github}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm px-5 py-2.5 rounded-lg border transition-colors hover:border-[#333844]"
+                style={{ borderColor: "var(--border)", color: "var(--fg-dim)" }}
+              >
                 GitHub
               </a>
             </div>
+          </div>
 
-            <div className="mt-12 flex gap-8">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <div className="text-2xl font-bold tracking-tight" style={{ color: "var(--fg)" }}>{s.value}</div>
-                  <div className="mono text-xs mt-1" style={{ color: "var(--fg-faint)" }}>{s.label}</div>
+          {/* stats */}
+          <div
+            className="mt-14 grid grid-cols-3 gap-px rounded-xl overflow-hidden border"
+            style={{ borderColor: "var(--border)", background: "var(--border-soft)" }}
+          >
+            {[
+              { v: "16", suffix: "건", label: "프로젝트" },
+              { v: "6", suffix: "", label: "작업 도메인" },
+              { v: "실서비스", suffix: "", label: "운영 경험" },
+            ].map((s) => (
+              <div key={s.label} className="px-3.5 py-5 sm:px-5 sm:py-6" style={{ background: "var(--bg-soft)" }}>
+                <div
+                  className="font-semibold"
+                  style={{ fontSize: "clamp(1.05rem, 4.4vw, 1.5rem)", letterSpacing: "-0.02em", color: "var(--fg)", whiteSpace: "nowrap" }}
+                >
+                  {s.v}
+                  {s.suffix && (
+                    <span style={{ fontSize: 14, color: "var(--fg-faint)", marginLeft: 2 }}>
+                      {s.suffix}
+                    </span>
+                  )}
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FEATURED */}
-        <section className="container-x scroll-mt-20">
-          <div className="flex items-end justify-between mb-7">
-            <h2 className="text-2xl font-semibold tracking-tight">
-              <span className="mono text-sm accent-text mr-2">01</span>대표 작업
-            </h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {featured.map((p, i) => (
-              <a key={p.slug} href={`/projects/${p.slug}`} className="rise block" style={{ animationDelay: `${i * 70}ms` }}>
-                <article className="card h-full p-7 flex flex-col gap-4">
-                  <div className="flex items-center gap-3">
-                    <span className="mono text-xs accent-text">FEATURED</span>
-                    <span className="mono text-xs" style={{ color: "var(--fg-faint)" }}>{p.year} · {p.role.split("(")[0].trim()}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold tracking-tight mb-1.5">{p.title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--fg-dim)" }}>{p.tagline}</p>
-                  </div>
-                  <ul className="flex flex-col gap-1.5 text-[13px]" style={{ color: "var(--fg-dim)" }}>
-                    {p.highlights.slice(0, 2).map((h) => (
-                      <li key={h} className="flex gap-2">
-                        <span className="accent-text">▹</span>
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
-                    {p.stack.slice(0, 5).map((s) => (
-                      <span key={s} className="mono text-[10.5px]" style={{ color: "var(--fg-faint)" }}>#{s}</span>
-                    ))}
-                  </div>
-                </article>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        {/* ALL WORK */}
-        <WorkSection projects={projects} />
-
-        {/* ABOUT */}
-        <section id="about" className="container-x scroll-mt-20">
-          <h2 className="text-2xl font-semibold tracking-tight mb-7">
-            <span className="mono text-sm accent-text mr-2">03</span>강점
-          </h2>
-          <div className="grid gap-5 md:grid-cols-3">
-            {SITE.strengths.map((s, i) => (
-              <div key={s.title} className="card p-6 rise" style={{ animationDelay: `${i * 60}ms` }}>
-                <div className="mono text-xs accent-text mb-3">0{i + 1}</div>
-                <h3 className="text-base font-semibold mb-2">{s.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--fg-dim)" }}>{s.body}</p>
+                <div className="text-[11px] sm:text-xs mt-1.5" style={{ color: "var(--fg-faint)", whiteSpace: "nowrap" }}>
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
+        </section>
 
-          <div className="card mt-6 p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-            <div>
-              <h3 className="text-lg font-semibold mb-1">함께 만들 것이 있으신가요?</h3>
-              <p className="text-sm" style={{ color: "var(--fg-dim)" }}>자동화 · 리버싱 · 웹/데스크톱 제품 문의를 환영합니다.</p>
-            </div>
-            <a href={`mailto:${SITE.email}`} className="mono text-sm px-5 py-2.5 rounded-lg font-medium whitespace-nowrap"
-              style={{ background: "var(--accent)", color: "var(--bg)" }}>
+        {/* ---------- WORK ---------- */}
+        <WorkSection featured={featured} rest={rest} />
+
+        {/* ---------- STRENGTHS ---------- */}
+        <section id="about" className="container-x py-20 scroll-mt-16">
+          <div className="section-title mb-9">강점</div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {SITE.strengths.map((s, i) => (
+              <div key={s.title} className="rise" style={{ animationDelay: `${i * 60}ms` }}>
+                <div className="eyebrow mb-3.5">0{i + 1}</div>
+                <h3 className="text-[15px] font-semibold mb-2.5">{s.title}</h3>
+                <p className="text-sm leading-[1.75]" style={{ color: "var(--fg-dim)" }}>
+                  {s.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ---------- CONTACT ---------- */}
+        <section className="container-x pb-24">
+          <div className="card p-9 sm:p-11 text-center">
+            <h3 className="text-xl sm:text-2xl font-semibold" style={{ letterSpacing: "-0.02em" }}>
+              함께 만들 것이 있으신가요?
+            </h3>
+            <p className="mt-3 text-sm" style={{ color: "var(--fg-dim)" }}>
+              자동화 · 리버싱 · 웹/데스크톱 제품 문의를 환영합니다.
+            </p>
+            <a
+              href={`mailto:${SITE.email}`}
+              className="mono inline-block mt-7 text-sm px-6 py-3 rounded-lg font-medium transition-opacity hover:opacity-90"
+              style={{ background: "var(--accent)", color: "#0a0b0e" }}
+            >
               {SITE.email}
             </a>
           </div>
