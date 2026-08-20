@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
+import { SmoothAnchors } from "@/components/SmoothAnchors";
 
 const sans = Space_Grotesk({
   variable: "--font-latin",
@@ -36,7 +37,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${sans.variable} ${mono.variable} h-full`}>
+    <html
+      lang="ko"
+      className={`${sans.variable} ${mono.variable} h-full`}
+    >
       <head>
         <link
           rel="stylesheet"
@@ -45,7 +49,10 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SmoothAnchors />
+        {children}
+      </body>
     </html>
   );
 }

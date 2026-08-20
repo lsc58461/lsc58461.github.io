@@ -27,8 +27,6 @@
 
 * { border-color: var(--border-soft); }
 
-html { scroll-behavior: smooth; }
-
 body {
   background: var(--bg);
   color: var(--fg);
