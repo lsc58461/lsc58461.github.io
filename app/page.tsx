@@ -84,7 +84,7 @@ export default function Home() {
             style={{ borderColor: "var(--border)", background: "var(--border-soft)" }}
           >
             {[
-              { v: "26", suffix: "건", label: "프로젝트" },
+              { v: "25", suffix: "건", label: "프로젝트" },
               { v: "7", suffix: "", label: "작업 도메인" },
               { v: "실서비스", suffix: "", label: "운영 경험" },
             ].map((s) => (
