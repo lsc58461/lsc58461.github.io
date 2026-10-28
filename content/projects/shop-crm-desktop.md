@@ -6,8 +6,8 @@ year: "2026"
 role: 기획 · 개발
 client: 비공개
 status: 개발 완료
-featured: false
-order: 28
+featured: true
+order: 4
 stack: ["Electron", "Next.js", "TypeScript", "sql.js (SQLite WASM)", "AES-256-GCM", "scrypt"]
 highlights:
   - "회원 · 포인트 충전 · 이용 기록 · 예약 달력 · 매출 · 부가세 계산을 인터넷 서버 없이 매장 PC에서 관리"
@@ -18,6 +18,7 @@ metrics:
   - { label: "저장", value: "로컬 · 암호화" }
   - { label: "자동 시험", value: "56건" }
   - { label: "백업", value: "매일 자동" }
+cover: "02.webp"
 images:
   - { src: "01.webp", caption: "회원 정보 — 방문 횟수·누적 결제·현재 포인트" }
   - { src: "02.webp", caption: "예약 달력 — 예약·완료·노쇼·취소를 색으로 구분" }

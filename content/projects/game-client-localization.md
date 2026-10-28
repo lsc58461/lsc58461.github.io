@@ -6,7 +6,7 @@ year: "2026"
 role: 리버스 엔지니어링 · 툴 개발 (외주)
 client: 비공개
 status: 추출·재주입 완료
-featured: true
+featured: false
 order: 4
 stack: ["C++ (MSVC)", "DLL 프록시 후킹", "Python", "AES", "UTF-16LE"]
 highlights:

@@ -6,8 +6,8 @@ year: "2026"
 role: 데이터 수집 · 풀스택 · 앱 · 배포 설계 (외주)
 client: 비공개
 status: 운영 중 · 앱 개발 중
-featured: false
-order: 20
+featured: true
+order: 2
 stack: ["Python", "TypeScript", "Next.js", "PostgreSQL", "Redis", "Docker", "Caddy", "React Native (Expo)", "FCM"]
 highlights:
   - "공식 사이트의 비공개 조회 API를 분석해 역대 1,499회차·경기 141,692건을 마스터 데이터로 복원"

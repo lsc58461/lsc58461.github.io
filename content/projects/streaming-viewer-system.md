@@ -6,7 +6,7 @@ year: "2026"
 role: 프로토콜 분석 · 시스템 설계 · 구현 (외주)
 client: 비공개
 status: 납품 완료
-featured: true
+featured: false
 order: 2
 stack: ["Node.js", "Python", "네트워크 캡처", "프록시 인프라", "HLS/LL-HLS"]
 highlights:

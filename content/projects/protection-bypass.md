@@ -6,7 +6,7 @@ year: "2026"
 role: 리버스 엔지니어링 (외주)
 client: 비공개
 status: 분석·우회 완료
-featured: true
+featured: false
 order: 5
 stack: ["x86 리버싱", "메모리/디스크 패치", "mitmproxy", "DLL 주입"]
 highlights:
