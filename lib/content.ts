@@ -70,6 +70,11 @@ function readCategories(data: Record<string, unknown>): Category[] {
 }
 
 function coerce(data: Record<string, unknown>, slug: string): ProjectMeta {
+  const images = readImages(data, slug);
+  const cover =
+    (typeof data.cover === "string" && images.find((img) => img.src.endsWith(`/${data.cover}`))) ||
+    images[0] ||
+    null;
   return {
     slug,
     title: String(data.title ?? slug),
@@ -85,7 +90,8 @@ function coerce(data: Record<string, unknown>, slug: string): ProjectMeta {
     highlights: (data.highlights as string[]) ?? [],
     metrics: (data.metrics as { label: string; value: string }[]) ?? [],
     links: (data.links as { label: string; href: string }[]) ?? [],
-    images: readImages(data, slug),
+    images,
+    cover,
   };
 }
 

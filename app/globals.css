@@ -196,3 +196,16 @@ h1, h2, h3, h4, p, li, dd, .keep { word-break: keep-all; overflow-wrap: break-wo
 }
 .gallery-viewer[open] { display: flex; align-items: center; justify-content: center; }
 .gallery-viewer::backdrop { background: rgba(5, 6, 8, 0.92); }
+
+/* ---- home thumbnails ---- */
+.cover-img { transition: transform 0.4s ease; }
+.group:hover .cover-img { transform: scale(1.025); }
+.cover-fallback {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(125, 211, 192, 0.10), transparent 60%),
+    radial-gradient(var(--border) 1px, transparent 1px) 0 0 / 14px 14px,
+    var(--panel-2);
+}
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .cover-img { transform: none; }
+}

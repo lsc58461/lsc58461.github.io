@@ -8,57 +8,98 @@ import { CATEGORY_LABEL, CATEGORY_ORDER } from "@/lib/types";
 const ORDER: (Category | "all")[] = ["all", ...CATEGORY_ORDER];
 const LABEL: Record<string, string> = { all: "전체", ...CATEGORY_LABEL };
 
+/** Screenshot thumbnail; projects without one show their headline metric instead. */
+function Cover({ p, small = false }: { p: Project; small?: boolean }) {
+  if (p.cover) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={p.cover.src}
+        alt=""
+        width={p.cover.width}
+        height={p.cover.height}
+        loading="lazy"
+        decoding="async"
+        className="cover-img block w-full h-full object-cover object-top-left"
+      />
+    );
+  }
+  const m = p.metrics[0];
+  return (
+    <div className="cover-fallback w-full h-full flex flex-col items-center justify-center text-center px-2">
+      {m && (
+        <>
+          <div
+            className="font-semibold leading-tight"
+            style={{ fontSize: small ? 12 : 22, color: "var(--accent)", letterSpacing: "-0.01em" }}
+          >
+            {m.value}
+          </div>
+          <div className="mt-1 truncate max-w-full" style={{ fontSize: small ? 9.5 : 12, color: "var(--fg-faint)" }}>
+            {m.label}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 function FeaturedCard({ p, i }: { p: Project; i: number }) {
   return (
     <Link href={`/projects/${p.slug}`} className="rise block group" style={{ animationDelay: `${i * 70}ms` }}>
-      <article className="card h-full p-7 flex flex-col">
-        <div className="flex items-start justify-between gap-4 mb-5">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0">
-            {p.categories.map((c, ci) => (
-              <span key={c} className="eyebrow" style={{ color: "var(--accent-dim)" }}>
-                {ci > 0 && <span style={{ opacity: 0.4, marginRight: 8 }}>/</span>}
-                {CATEGORY_LABEL[c]}
-              </span>
-            ))}
-          </div>
-          <span className="mono text-[11px] shrink-0" style={{ color: "var(--fg-faint)" }}>
-            {p.year}
-          </span>
+      <article className="card h-full overflow-hidden flex flex-col">
+        <div className="aspect-video overflow-hidden border-b" style={{ borderColor: "var(--border-soft)" }}>
+          <Cover p={p} />
         </div>
-
-        <h3 className="text-[19px] font-semibold mb-2" style={{ letterSpacing: "-0.02em" }}>
-          {p.title}
-        </h3>
-        <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--fg-dim)" }}>
-          {p.tagline}
-        </p>
-
-        <ul className="flex flex-col gap-2.5 mb-7">
-          {p.highlights.slice(0, 2).map((h) => (
-            <li key={h} className="flex gap-2.5 text-[13px] leading-[1.65]" style={{ color: "var(--fg-dim)" }}>
-              <span
-                aria-hidden
-                className="shrink-0"
-                style={{
-                  width: 4, height: 4, borderRadius: 99,
-                  background: "var(--accent-dim)", marginTop: 8,
-                }}
-              />
-              <span>{h}</span>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-auto flex items-center justify-between gap-4 pt-5 border-t" style={{ borderColor: "var(--border-soft)" }}>
-          <div className="mono text-[11px] truncate" style={{ color: "var(--fg-faint)" }}>
-            {p.stack.slice(0, 3).join(" · ")}
+        <div className="p-7 flex flex-col flex-1">
+          <div className="flex items-start justify-between gap-4 mb-5">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 min-w-0">
+              {p.categories.map((c, ci) => (
+                <span key={c} className="eyebrow" style={{ color: "var(--accent-dim)" }}>
+                  {ci > 0 && <span style={{ opacity: 0.4, marginRight: 8 }}>/</span>}
+                  {CATEGORY_LABEL[c]}
+                </span>
+              ))}
+            </div>
+            <span className="mono text-[11px] shrink-0" style={{ color: "var(--fg-faint)" }}>
+              {p.year}
+            </span>
           </div>
-          <span
-            className="text-[13px] shrink-0 transition-transform group-hover:translate-x-0.5"
-            style={{ color: "var(--accent)" }}
-          >
-            자세히 →
-          </span>
+
+          <h3 className="text-[19px] font-semibold mb-2" style={{ letterSpacing: "-0.02em" }}>
+            {p.title}
+          </h3>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--fg-dim)" }}>
+            {p.tagline}
+          </p>
+
+          <ul className="flex flex-col gap-2.5 mb-7">
+            {p.highlights.slice(0, 2).map((h) => (
+              <li key={h} className="flex gap-2.5 text-[13px] leading-[1.65]" style={{ color: "var(--fg-dim)" }}>
+                <span
+                  aria-hidden
+                  className="shrink-0"
+                  style={{
+                    width: 4, height: 4, borderRadius: 99,
+                    background: "var(--accent-dim)", marginTop: 8,
+                  }}
+                />
+                <span>{h}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-auto flex items-center justify-between gap-4 pt-5 border-t" style={{ borderColor: "var(--border-soft)" }}>
+            <div className="mono text-[11px] truncate" style={{ color: "var(--fg-faint)" }}>
+              {p.stack.slice(0, 3).join(" · ")}
+            </div>
+            <span
+              className="text-[13px] shrink-0 transition-transform group-hover:translate-x-0.5"
+              style={{ color: "var(--accent)" }}
+            >
+              자세히 →
+            </span>
+          </div>
         </div>
       </article>
     </Link>
@@ -72,9 +113,16 @@ function ProjectRow({ p, i }: { p: Project; i: number }) {
         className="py-5 px-1 border-b flex items-start gap-4 sm:gap-5 transition-colors"
         style={{ borderColor: "var(--border-soft)" }}
       >
-        <span className="mono text-[11px] w-7 sm:w-9 shrink-0 pt-0.5" style={{ color: "var(--fg-faint)" }}>
+        <span className="mono text-[11px] w-6 sm:w-9 shrink-0 pt-0.5" style={{ color: "var(--fg-faint)" }}>
           {String(i + 1).padStart(2, "0")}
         </span>
+
+        <div
+          className="w-[92px] sm:w-[136px] aspect-[16/10] shrink-0 overflow-hidden rounded-md border"
+          style={{ borderColor: "var(--border)", background: "var(--panel)" }}
+        >
+          <Cover p={p} small />
+        </div>
 
         <div className="flex-1 min-w-0">
           <h4

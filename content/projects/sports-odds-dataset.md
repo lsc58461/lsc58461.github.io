@@ -1,7 +1,7 @@
 ---
 title: 경기 배당 데이터 플랫폼
 tagline: 14만 건 경기·배당 마스터에서 회원 웹 서비스, 안드로이드·iOS 앱까지
-categories: [data, web, infra]
+categories: [data, web, ios, android, infra]
 year: "2026"
 role: 데이터 수집 · 풀스택 · 앱 · 배포 설계 (외주)
 client: 비공개

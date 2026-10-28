@@ -85,7 +85,7 @@ export default function Home() {
           >
             {[
               { v: "27", suffix: "건", label: "프로젝트" },
-              { v: "7", suffix: "", label: "작업 도메인" },
+              { v: "9", suffix: "", label: "작업 도메인" },
               { v: "실서비스", suffix: "", label: "운영 경험" },
             ].map((s) => (
               <div key={s.label} className="px-3.5 py-5 sm:px-5 sm:py-6" style={{ background: "var(--bg-soft)" }}>

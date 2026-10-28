@@ -5,6 +5,8 @@ export type Category =
   | "ai"
   | "data"
   | "desktop"
+  | "ios"
+  | "android"
   | "infra";
 
 export interface ProjectMeta {
@@ -24,6 +26,8 @@ export interface ProjectMeta {
   metrics: { label: string; value: string }[];
   links: { label: string; href: string }[];
   images: ProjectImage[];
+  /** Thumbnail for the home page: frontmatter `cover:` file name, else the first image. */
+  cover: ProjectImage | null;
 }
 
 /** Screenshot shown in the project gallery. Size is read from the file at build time. */
@@ -46,6 +50,8 @@ export const CATEGORY_LABEL: Record<Category, string> = {
   ai: "AI",
   data: "데이터",
   desktop: "데스크톱",
+  ios: "iOS",
+  android: "Android",
   infra: "인프라",
 };
 
@@ -57,6 +63,8 @@ export const CATEGORY_ORDER: Category[] = [
   "ai",
   "data",
   "desktop",
+  "ios",
+  "android",
   "infra",
 ];
 
