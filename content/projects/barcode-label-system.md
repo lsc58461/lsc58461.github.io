@@ -18,6 +18,9 @@ metrics:
   - { label: "라벨", value: "41×16mm 1열" }
   - { label: "프린터", value: "Zebra ZT410" }
   - { label: "이력", value: "월별 엑셀" }
+images:
+  - { src: "01.webp", caption: "스캔 화면 — 매칭표에 없는 바코드는 크게 경고, 최근 기록에 남김" }
+  - { src: "02.webp", caption: "테스트 모드 라벨 미리보기 — 프린터로 보낼 ZPL과 렌더링 결과" }
 ---
 
 ## 무엇을 만들었나

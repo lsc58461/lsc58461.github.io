@@ -182,3 +182,17 @@ h1, h2, h3, h4, p, li, dd, .keep { word-break: keep-all; overflow-wrap: break-wo
   .rise { animation: none; }
   .card:hover { transform: none; }
 }
+
+/* ---- screenshot viewer ---- */
+.gallery-viewer {
+  max-width: 100vw;
+  max-height: 100dvh;
+  width: 100vw;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.gallery-viewer[open] { display: flex; align-items: center; justify-content: center; }
+.gallery-viewer::backdrop { background: rgba(5, 6, 8, 0.92); }

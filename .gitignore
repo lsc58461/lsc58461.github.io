@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# screenshot tooling and raw (unredacted) captures — never publish
+/.shots/

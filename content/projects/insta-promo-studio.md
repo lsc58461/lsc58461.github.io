@@ -18,6 +18,9 @@ metrics:
   - { label: "출력", value: "1080×1350" }
   - { label: "업로드", value: "instagrapi" }
   - { label: "마스킹", value: "사전 후처리" }
+images:
+  - { src: "01.webp", caption: "내역 — 만든 캐러셀 기록 (외주 프로젝트 이름은 앱이 자동으로 가림)" }
+  - { src: "02.webp", caption: "만들기 — 슬라이드 미리보기·문구 편집·캡션, 릴스/스토리 업로드" }
 ---
 
 ## 무엇을 만들었나

@@ -18,6 +18,9 @@ metrics:
   - { label: "컷 방식", value: "무손실 keyframe" }
   - { label: "제공자", value: "OpenAI · Gemini" }
   - { label: "파이프라인", value: "STT→LLM→FFmpeg" }
+images:
+  - { src: "01.webp", caption: "대시보드 — 작업 기록과 추출 통계 (영상 파일명은 가림)" }
+  - { src: "02.webp", caption: "하이라이트 편집 — AI가 고른 구간별 점수·설명, 타임라인과 쇼츠 구성 미리보기 (영상은 가림)" }
 ---
 
 ## 무엇을 만들었나

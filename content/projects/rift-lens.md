@@ -19,6 +19,11 @@ metrics:
   - { label: "캐시 재조회", value: "0.017s" }
   - { label: "추정 정확도", value: "챌린저 1655 vs 실측 1677 LP" }
 links: []
+images:
+  - { src: "01.webp", caption: "첫 화면 — 닉네임#태그로 검색" }
+  - { src: "02.webp", caption: "소환사 분석 — 최근 경기 로비 평균 랭크로 매칭 구간 추정" }
+  - { src: "03.webp", caption: "챔피언 통계 — 패치·티어별 표본과 점수" }
+  - { src: "04.webp", caption: "서버 상위 랭킹" }
 ---
 
 ## 무엇을 만들었나

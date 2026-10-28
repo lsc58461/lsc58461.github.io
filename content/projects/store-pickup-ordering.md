@@ -18,6 +18,10 @@ metrics:
   - { label: "동시 주문", value: "최대 10창" }
   - { label: "감시 확인 실패", value: "60% → 0%" }
   - { label: "주문 1건", value: "약 2분" }
+images:
+  - { src: "01.webp", caption: "주문 목록 — 한 줄이 주문 1건, 동시 진행 상황과 결과" }
+  - { src: "02.webp", caption: "재고 감시 — 감시 상품·간격·텔레그램 알림·자동 주문" }
+  - { src: "03.webp", caption: "설정 — 실행 옵션과 엑셀 빈 칸에 쓸 기본값" }
 ---
 
 ## 무엇을 만들었나

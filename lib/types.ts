@@ -23,6 +23,15 @@ export interface ProjectMeta {
   highlights: string[];
   metrics: { label: string; value: string }[];
   links: { label: string; href: string }[];
+  images: ProjectImage[];
+}
+
+/** Screenshot shown in the project gallery. Size is read from the file at build time. */
+export interface ProjectImage {
+  src: string;
+  caption: string;
+  width: number;
+  height: number;
 }
 
 export interface Project extends ProjectMeta {

@@ -18,6 +18,8 @@ metrics:
   - { label: "구조", value: "2레이어" }
   - { label: "대상", value: "회전 도메인" }
   - { label: "검증", value: "ON/OFF 대조" }
+images:
+  - { src: "01.webp", caption: "확장 팝업 — 팝업·팝언더 차단, 엄격 모드, 광고 요소 제거와 차단 통계 (대상 사이트명은 가림)" }
 ---
 
 ## 무엇을 만들었나

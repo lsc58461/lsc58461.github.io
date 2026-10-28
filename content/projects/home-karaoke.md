@@ -18,6 +18,8 @@ metrics:
   - { label: "화질", value: "720p+ 분리 재생" }
   - { label: "재생", value: "프로그레시브 캐시" }
   - { label: "음성", value: "dry/에코 분리" }
+images:
+  - { src: "01.webp", caption: "노래방 화면 — 최근 부른 곡, 마이크·에코·지연 설정" }
 ---
 
 ## 무엇을 만들었나

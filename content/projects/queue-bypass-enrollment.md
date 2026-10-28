@@ -18,6 +18,8 @@ metrics:
   - { label: "방식", value: "순수 HTTP" }
   - { label: "대기열", value: "우회" }
   - { label: "브라우저 탐지", value: "무력화" }
+images:
+  - { src: "01.webp", caption: "신청 화면 — 과목별 1·2순위 분반, 서버 시계 보정 후 오픈 순간 순수 HTTP로 신청 (학교명은 가림)" }
 ---
 
 ## 문제

@@ -18,6 +18,10 @@ metrics:
   - { label: "AI", value: "Gemini" }
   - { label: "캡차", value: "조건부 대응" }
   - { label: "계정", value: "멀티 + 프록시" }
+images:
+  - { src: "01.webp", caption: "커뮤니티 A — 계정 2개 번갈아 쓰기, LLM 설정, 하루 한도와 대기 시간" }
+  - { src: "02.webp", caption: "커뮤니티 B — 사이트·계정·프록시 설정(사이트 주소는 가림)" }
+  - { src: "03.webp", caption: "커뮤니티 B — 실행 화면과 실시간 로그" }
 ---
 
 ## 무엇을 만들었나

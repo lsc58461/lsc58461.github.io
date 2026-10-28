@@ -18,6 +18,8 @@ metrics:
   - { label: "추출 텍스트", value: "8MB+" }
   - { label: "재주입", value: "런타임 오버라이드" }
   - { label: "빌드", value: "32bit native" }
+images:
+  - { src: "01.webp", caption: "번역 도구 — 암호화 컨테이너에서 꺼낸 텍스트 표를 번역해 다시 넣기 (게임명·키·경로는 가림)" }
 ---
 
 ## 문제

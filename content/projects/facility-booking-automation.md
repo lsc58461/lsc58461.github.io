@@ -18,6 +18,10 @@ metrics:
   - { label: "대상 사이트", value: "3종+" }
   - { label: "방식", value: "순수 HTTP" }
   - { label: "경쟁 우위", value: "서버시계 동기화" }
+images:
+  - { src: "01.webp", caption: "예약 매크로 A — 계정·신청자 정보·코트 우선순위 예약 대상" }
+  - { src: "02.webp", caption: "예약 매크로 B — 요일·시간대 목표, 오픈 시각 발사와 서버 시계 측정" }
+  - { src: "03.webp", caption: "예약 매크로 C — 오픈 시각 대기, 1·2순위 날짜와 취소 대기 재시도" }
 ---
 
 ## 무엇을 했나

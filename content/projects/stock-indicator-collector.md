@@ -18,6 +18,8 @@ metrics:
   - { label: "종목", value: "2,765" }
   - { label: "전량 수집", value: "~401s (동시성 8)" }
   - { label: "지표 검증", value: "오차 0.000000" }
+images:
+  - { src: "01.webp", caption: "결과 엑셀 — 전종목 일별 OHLC·거래대금과 MA·RSI·MACD" }
 ---
 
 ## 무엇을 만들었나

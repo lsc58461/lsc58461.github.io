@@ -18,6 +18,8 @@ metrics:
   - { label: "동시 신청", value: "150명 무결" }
   - { label: "조회 응답", value: "중앙 261ms" }
   - { label: "유실/중복", value: "0건" }
+images:
+  - { src: "01.webp", caption: "신청 화면 — 시간대별 남은 자리, 신청자 이름은 앱이 가려서 표시" }
 ---
 
 ## 무엇을 만들었나

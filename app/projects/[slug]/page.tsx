@@ -5,6 +5,7 @@ import { getProject, getProjectSlugs } from "@/lib/content";
 import { CATEGORY_LABEL } from "@/lib/types";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Gallery } from "@/components/Gallery";
 
 export function generateStaticParams() {
   return getProjectSlugs().map((slug) => ({ slug }));
@@ -117,6 +118,8 @@ export default async function ProjectPage({
               </span>
             ))}
           </div>
+
+          <Gallery images={project.images} />
 
           {/* body */}
           <article

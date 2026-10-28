@@ -18,6 +18,11 @@ metrics:
   - { label: "저장", value: "로컬 · 암호화" }
   - { label: "자동 시험", value: "56건" }
   - { label: "백업", value: "매일 자동" }
+images:
+  - { src: "01.webp", caption: "회원 정보 — 방문 횟수·누적 결제·현재 포인트" }
+  - { src: "02.webp", caption: "예약 달력 — 예약·완료·노쇼·취소를 색으로 구분" }
+  - { src: "03.webp", caption: "회원 이용 기록 — 이용·충전·예약 탭" }
+  - { src: "04.webp", caption: "통계 — 일·주·월별 매출과 결제 수단" }
 ---
 
 ## 무엇을 만들었나

@@ -18,6 +18,8 @@ metrics:
   - { label: "규모", value: "최대 85만 건" }
   - { label: "수집률", value: "실측 기반 제시" }
   - { label: "출력", value: "엑셀" }
+images:
+  - { src: "01.webp", caption: "수집 결과 — 검색어별 업체·사이트·이메일·출처 페이지 (업체 정보는 가림)" }
 ---
 
 ## 무엇을 했나

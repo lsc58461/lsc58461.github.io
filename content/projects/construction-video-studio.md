@@ -18,6 +18,10 @@ metrics:
   - { label: "인코딩", value: "실시간 5.6배" }
   - { label: "용량 상한", value: "284MB → 31.9MB" }
   - { label: "보호", value: "3겹 하드닝" }
+images:
+  - { src: "01.webp", caption: "작업 편집 — 촬영 정보와 구간 자막, 현장 공통 정보" }
+  - { src: "02.webp", caption: "묶음 목록 — 여러 작업을 한 번에 만들기" }
+  - { src: "03.webp", caption: "미리보기 — 인트로 카드와 하단 자막이 얹힌 결과" }
 ---
 
 ## 무엇을 만들었나

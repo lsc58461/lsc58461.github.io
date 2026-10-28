@@ -18,6 +18,8 @@ metrics:
   - { label: "PHP 파일", value: "18개 전수" }
   - { label: "검증", value: "출력 0줄 차이" }
   - { label: "핵심 원인", value: "헤더 공백 1칸" }
+images:
+  - { src: "01.webp", caption: "이전 후 실서비스 첫 화면 — PHP 8 호스팅에서 기존과 같은 출력 (기관명·연락처·배너는 가림)" }
 ---
 
 ## 상황

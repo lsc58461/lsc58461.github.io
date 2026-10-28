@@ -18,6 +18,10 @@ metrics:
   - { label: "경기 데이터", value: "141,692건" }
   - { label: "회차", value: "1,499" }
   - { label: "배포", value: "무중단 롤링" }
+images:
+  - { src: "01.webp", caption: "회차별 경기 목록 — 배당 조건으로 비슷한 과거 경기 검색" }
+  - { src: "02.webp", caption: "계산기 — 이번 회차 경기를 골라 예상 적중금 계산" }
+  - { src: "03.webp", caption: "경기 상세 — 배당·구매율과 상대 전적" }
 ---
 
 ## 무엇을 만들었나
