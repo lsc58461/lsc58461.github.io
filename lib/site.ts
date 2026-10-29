@@ -10,6 +10,8 @@ export const SITE = {
   emailPlaceholder: "lsc58461 [at] gmail [dot] com",
   github: "https://github.com/lsc58461",
   soomgo: "https://soomgo.com/profile/users/672487",
+  /** GA4 측정 ID (애널리틱스 계정 "lsc58461 포트폴리오") */
+  gaId: "G-HHE9HWWZPS",
   phoneEncoded: "NTM2My02NjI4LTAxMA==",
   phonePlaceholder: "010 · 8266 · 3635",
   strengths: [

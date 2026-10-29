@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
@@ -52,6 +53,18 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <SmoothAnchors />
         {children}
+        {/* GA4 — 배포 빌드에서만(로컬 next dev 방문은 통계에 안 섞이게) */}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${SITE.gaId}');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
