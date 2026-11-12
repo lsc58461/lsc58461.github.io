@@ -11,6 +11,7 @@ export const SITE = {
   emailPlaceholder: "lsc58461 [at] gmail [dot] com",
   github: "https://github.com/lsc58461",
   soomgo: "https://soomgo.com/profile/users/672487",
+  kmong: "https://kmong.com/@%EC%9D%B4%EC%A0%95%EC%9C%A4",
   /** GA4 측정 ID (애널리틱스 계정 "lsc58461 포트폴리오") */
   gaId: "G-HHE9HWWZPS",
   phoneEncoded: "NTM2My02NjI4LTAxMA==",

@@ -53,18 +53,18 @@ export default function Home() {
 
             <div className="mt-9 flex flex-wrap items-center gap-2.5">
               <a
-                href="#work"
+                href="#contact"
                 className="text-sm px-5 py-2.5 rounded-lg font-medium transition-opacity hover:opacity-90"
                 style={{ background: "var(--accent)", color: "#0a0b0e" }}
               >
-                작업 보기
+                무료로 가능 여부 확인하기
               </a>
               <a
-                href="#contact"
+                href="#work"
                 className="text-sm px-5 py-2.5 rounded-lg border transition-colors hover:border-[#333844]"
                 style={{ borderColor: "var(--border)", color: "var(--fg-dim)" }}
               >
-                연락하기
+                작업 보기
               </a>
               <a
                 href={SITE.github}
@@ -131,10 +131,10 @@ export default function Home() {
         <section id="contact" className="container-x pb-24 scroll-mt-16">
           <div className="card p-9 sm:p-11 text-center">
             <h3 className="text-xl sm:text-2xl font-semibold" style={{ letterSpacing: "-0.02em" }}>
-              함께 만들 것이 있으신가요?
+              만들고 싶은 것을 알려 주세요
             </h3>
             <p className="mt-3 text-sm" style={{ color: "var(--fg-dim)" }}>
-              웹 서비스 · 업무 자동화 · 데이터 수집 · AI 연동 문의를 환영합니다.
+              하고 싶은 일을 짧게 보내 주시면 가능 여부와 예상 비용을 무료로 먼저 알려 드립니다.
             </p>
             <div className="mt-7 flex flex-col items-center gap-4">
               <Contact
@@ -161,6 +161,16 @@ export default function Home() {
                   style={{ color: "var(--fg-faint)" }}
                 >
                   숨고에서 견적 요청하기 ↗
+                </a>
+                <span aria-hidden style={{ color: "var(--fg-faint)", opacity: 0.5 }}>·</span>
+                <a
+                  href={SITE.kmong}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="transition-colors hover:text-white"
+                  style={{ color: "var(--fg-faint)" }}
+                >
+                  크몽에서 의뢰하기 ↗
                 </a>
               </div>
             </div>
