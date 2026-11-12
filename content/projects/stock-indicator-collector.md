@@ -7,7 +7,7 @@ role: 개발 · 검증 (외주)
 client: 비공개
 status: 구현 · 검증 완료
 featured: false
-order: 22
+order: 8
 stack: ["Python", "pandas", "SQLite", "openpyxl"]
 highlights:
   - "전종목 2,765개의 일별 OHLC·거래대금을 단일 무인증 API로 수집, 보조지표 계산 후 엑셀 출력"

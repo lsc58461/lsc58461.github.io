@@ -7,7 +7,7 @@ role: 원인 분석 · 복구 설계 (외주)
 client: 비공개
 status: 원인 규명 · 설계 완료
 featured: false
-order: 18
+order: 14
 stack: ["Python", "네트워크 분석", "프록시 인프라"]
 highlights:
   - "'차단당했으니 프록시를 늘리자'는 통설을 실측으로 반박 — IP 문제가 아님을 데이터로 입증"

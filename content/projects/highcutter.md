@@ -7,7 +7,7 @@ role: 개발 (외주)
 client: 비공개
 status: 개발 완료
 featured: true
-order: 3
+order: 4
 stack: ["Electron", "Next.js 15", "TypeScript", "shadcn/ui", "FFmpeg", "OpenAI / Gemini"]
 highlights:
   - "영상 드롭 → Whisper STT → LLM 하이라이트 추론 → FFmpeg 무손실 컷/병합 파이프라인"

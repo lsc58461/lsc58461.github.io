@@ -39,9 +39,9 @@ export default function Home() {
                 letterSpacing: "-0.025em",
               }}
             >
-              문서 없는 시스템을 열어
+              반복 업무는 자동으로,
               <br />
-              <span className="accent-text">돌아가는 제품</span>으로 만듭니다.
+              아이디어는 <span className="accent-text">돌아가는 서비스</span>로.
             </h1>
 
             <p
@@ -134,7 +134,7 @@ export default function Home() {
               함께 만들 것이 있으신가요?
             </h3>
             <p className="mt-3 text-sm" style={{ color: "var(--fg-dim)" }}>
-              자동화 · 리버싱 · 웹/데스크톱 제품 문의를 환영합니다.
+              웹 서비스 · 업무 자동화 · 데이터 수집 · AI 연동 문의를 환영합니다.
             </p>
             <div className="mt-7 flex flex-col items-center gap-4">
               <Contact

@@ -7,7 +7,7 @@ role: 개발 (외주)
 client: 비공개
 status: 납품 완료
 featured: false
-order: 10
+order: 24
 stack: ["Node.js (ESM)", "Playwright", "프록시 인프라"]
 highlights:
   - "키워드 검색 → 필터 → 검색결과 클릭 → 재생까지 실제 플레이어 신호 기반 시청 (URL 직접진입 금지 요구 충족)"

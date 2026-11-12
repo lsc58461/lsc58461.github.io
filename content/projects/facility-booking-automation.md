@@ -7,7 +7,7 @@ role: 프로토콜 분석 · 개발 (외주 · 다건)
 client: 비공개
 status: 납품 / 진행
 featured: false
-order: 6
+order: 18
 stack: ["Python", "순수 HTTP (requests/urllib)", "Playwright", "ddddocr(OCR)"]
 highlights:
   - "여러 지자체 예약 사이트의 조회·예약 REST/폼 계약을 각각 리버싱 (오픈 규칙, 슬롯 마크업, 인코딩 함정 포함)"

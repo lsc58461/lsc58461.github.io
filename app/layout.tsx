@@ -20,7 +20,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nixlab.pages.dev"),
   title: {
-    default: `${SITE.name} — ${SITE.role}`,
+    default: `${SITE.brand} ${SITE.name} — ${SITE.role}`,
     template: `%s · ${SITE.name}`,
   },
   description: SITE.intro,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: `${SITE.name} — ${SITE.role}`,
+    title: `${SITE.brand} ${SITE.name} — ${SITE.role}`,
     description: SITE.intro,
     type: "website",
     locale: "ko_KR",

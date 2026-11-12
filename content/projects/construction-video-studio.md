@@ -7,7 +7,7 @@ role: 기획 · 개발 (지인 요청)
 client: 개인 프로젝트
 status: 배포 · 사용 중
 featured: false
-order: 24
+order: 10
 stack: ["Electron", "FFmpeg (NVENC)", "Cloudflare Workers", "bytenode"]
 highlights:
   - "촬영 정보 + 영상 N개를 묶어 자막·인트로 카드가 붙은 결과물을 자동 생성, NVENC로 실시간 대비 5.6배"

@@ -7,7 +7,7 @@ role: 분석 · 개발 (외주 · 추가 의뢰 2회)
 client: 비공개
 status: 납품 완료
 featured: false
-order: 27
+order: 20
 stack: ["Python", "patchright (Chromium)", "CustomTkinter", "openpyxl", "Telegram Bot API", "PyInstaller"]
 highlights:
   - "해외 전자제품 브랜드 공식 스토어의 매장 픽업 주문을 엑셀 한 줄 = 주문 1건으로, 최대 10창 동시 진행"

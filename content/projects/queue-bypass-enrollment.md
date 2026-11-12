@@ -7,7 +7,7 @@ role: 프로토콜 분석 · 개발 (외주 · 다건)
 client: 비공개
 status: 납품 / 검증 완료
 featured: false
-order: 8
+order: 19
 stack: ["Python", "httpx (순수 HTTP)", "Playwright"]
 highlights:
   - "SPA + 상용 대기열 솔루션 + devtools-detector로 강화된 리뉴얼 사이트를 순수 HTTP로 우회"

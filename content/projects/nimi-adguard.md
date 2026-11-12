@@ -7,7 +7,7 @@ role: 개발 (개인 프로젝트)
 client: 개인 프로젝트
 status: 개발 완료
 featured: false
-order: 13
+order: 26
 stack: ["Chrome Extension MV3", "declarativeNetRequest", "MAIN world 스크립트", "Playwright(검증)"]
 highlights:
   - "매번 랜덤 도메인으로 회전하는 팝언더 광고의 실제 메커니즘을 실측으로 규명"

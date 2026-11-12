@@ -1,10 +1,11 @@
 export const SITE = {
   name: "이정윤",
   handle: "lsc58461",
-  role: "Freelance Software Engineer",
-  tagline: "리버스 엔지니어링 · 자동화 · 풀스택",
+  brand: "NixLab",
+  role: "웹·자동화·AI 외주 개발",
+  tagline: "웹 서비스 · 업무 자동화 · 데이터 수집 · AI",
   intro:
-    "웹·데스크톱 제품부터 프로토콜 리버싱과 안티봇 우회까지, '되게 만드는' 일을 합니다. 남들이 API 문서가 없다고 멈추는 지점에서 네트워크를 뜯어 계약을 복원하고, 그 위에 안정적으로 돌아가는 제품을 올립니다.",
+    "웹 서비스와 앱, 업무 자동화, 데이터 수집, AI 연동까지 기획부터 개발·배포·유지보수를 한 사람이 끝까지 맡습니다. 실사용자가 쓰는 서비스를 직접 운영해 온 경험으로, 처음 정한 금액과 일정 안에서 진행 상황을 수시로 공유하며 만듭니다.",
   /** reversed + base64 so the plain address never lands in the built HTML */
   emailEncoded: "bW9jLmxpYW1nQDE2NDg1Y3Ns",
   emailPlaceholder: "lsc58461 [at] gmail [dot] com",
@@ -16,16 +17,16 @@ export const SITE = {
   phonePlaceholder: "010 · 8266 · 3635",
   strengths: [
     {
-      title: "리버스 엔지니어링",
-      body: "비공식 API·바이너리 프로토콜·암호화 컨테이너를 뜯어 계약을 복원합니다. 게임 클라이언트 주입, 라이선스/무결성 보호 우회, 캡차·대기열 분석까지.",
+      title: "웹 서비스 · 앱",
+      body: "회원·결제·관리자 화면을 갖춘 웹 서비스와 앱을 만들고, 서버 구축과 무중단 배포, 운영까지 맡습니다. Next.js · React Native · PostgreSQL.",
     },
     {
-      title: "HTTP 자동화 · 안티봇",
-      body: "브라우저 없이 순수 HTTP로 로그인·세션·CSRF·대기열을 재현합니다. 데이터로 안티프로드 천장을 실측하고 안전 파라미터를 도출합니다.",
+      title: "업무 자동화 · 데이터 수집",
+      body: "엑셀 정리, 반복 입력, 여러 사이트의 정보 모으기를 프로그램 하나로 바꿉니다. 공식 API가 없는 곳도 실제 통신 구조를 분석해 빠르고 안정적으로 처리합니다.",
     },
     {
-      title: "풀스택 제품",
-      body: "Next.js·Electron·Python으로 실사용 트래픽을 받는 웹 서비스와 배포형 데스크톱 앱을 처음부터 끝까지 만듭니다.",
+      title: "AI 연동 · PC 프로그램",
+      body: "GPT · Gemini 같은 AI를 실제 업무 흐름에 붙이고, 설치해서 바로 쓰는 PC 프로그램(Electron · Python)으로 만들어 현장에 맞춥니다.",
     },
   ],
 };

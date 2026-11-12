@@ -6,8 +6,8 @@ year: "2026"
 role: 기획 · 개발 · 운영 (개인 프로젝트)
 client: 개인 프로젝트
 status: 실서비스 운영 중
-featured: true
-order: 1
+featured: false
+order: 5
 stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind v4", "shadcn/ui", "Supabase(Postgres)", "Vercel", "Riot API"]
 highlights:
   - "최근 경기 참가자 랭크를 역추적해 소환사의 '매칭 실력대'를 추정하는 알고리즘 설계 (관측 보정 + Elo 리플레이 + 95% 오차범위)"

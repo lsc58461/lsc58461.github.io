@@ -7,7 +7,7 @@ role: 개발 (외주)
 client: 비공개
 status: 납품 완료
 featured: false
-order: 7
+order: 11
 stack: ["Electron", "Next.js 15", "Python", "OpenAI Whisper", "fuzzball", "yt-dlp"]
 highlights:
   - ".vrew 파일 포맷을 리버싱 — ZIP + project.json 구조와 integrity SHA-256 해시 알고리즘 재현"

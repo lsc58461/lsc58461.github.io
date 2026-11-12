@@ -7,7 +7,7 @@ role: 리버스 엔지니어링 (외주)
 client: 비공개
 status: 분석·우회 완료
 featured: false
-order: 5
+order: 22
 stack: ["x86 리버싱", "메모리/디스크 패치", "mitmproxy", "DLL 주입"]
 highlights:
   - "라이선스 서버의 Ed25519 서명 검증을 메모리 패치로 무력화 + MITM으로 응답 forge"

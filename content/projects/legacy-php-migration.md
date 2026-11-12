@@ -7,7 +7,7 @@ role: 원인 분석 · 복구 (외주)
 client: 비공개
 status: 배포 완료
 featured: false
-order: 25
+order: 15
 stack: ["PHP 8.4", "MariaDB", "mysqli"]
 highlights:
   - "이전 후 전 페이지 500이던 사이트의 직접 원인을 규명 — HTTP 헤더 이름의 공백 하나가 앞단 프록시에서 거부됨"

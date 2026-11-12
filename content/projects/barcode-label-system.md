@@ -7,7 +7,7 @@ role: 개발 (외주)
 client: 비공개
 status: 납품 완료
 featured: false
-order: 16
+order: 9
 stack: ["Python", "Tkinter", "win32print", "ZPL (Zebra)"]
 highlights:
   - "QR(파트번호) 스캔 → 30품목 매칭표에서 ALC 코드 조회 → 41×16mm 출하 라벨 자동 출력"

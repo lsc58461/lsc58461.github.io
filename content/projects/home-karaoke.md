@@ -7,7 +7,7 @@ role: 기획 · 개발 (개인 프로젝트)
 client: 개인 프로젝트
 status: 개발 완료
 featured: false
-order: 26
+order: 27
 stack: ["Electron", "Next.js", "yt-dlp", "Web Audio API"]
 highlights:
   - "유튜브 반주 검색·재생 + 마이크 입력에 실시간 에코/리버브를 얹는 노래방 믹서"

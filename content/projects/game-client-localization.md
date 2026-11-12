@@ -7,7 +7,7 @@ role: 리버스 엔지니어링 · 툴 개발 (외주)
 client: 비공개
 status: 추출·재주입 완료
 featured: false
-order: 4
+order: 21
 stack: ["C++ (MSVC)", "DLL 프록시 후킹", "Python", "AES", "UTF-16LE"]
 highlights:
   - "표준 포맷을 AES 레이어로 감싼 독자 암호화 컨테이너(.vp)를 분석 — 복호화 엔진이 런타임 언패킹되는 보호 DLL"

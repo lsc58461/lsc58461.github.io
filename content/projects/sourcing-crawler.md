@@ -7,7 +7,7 @@ role: 설계 · 개발 (외주)
 client: 비공개
 status: 설계 확정
 featured: false
-order: 15
+order: 17
 stack: ["Python", "프록시 로테이션", "이미지 검색", "openpyxl"]
 highlights:
   - "상품 상세(단가 구간·MOQ·판매자) 수집 + 카테고리·키워드·이미지 3종 검색"

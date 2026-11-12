@@ -7,7 +7,7 @@ role: 개발 · 배포 (외주)
 client: 비공개
 status: 배포 완료
 featured: false
-order: 14
+order: 6
 stack: ["Next.js", "Vercel", "Google Apps Script", "Google Sheets"]
 highlights:
   - "구글 시트를 백엔드로 쓰는 선착순 자리 배정 시스템을 설계·배포"

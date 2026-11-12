@@ -7,7 +7,7 @@ role: 인프라 운영 · 장애 대응 (위탁)
 client: 비공개
 status: 운영 중
 featured: false
-order: 17
+order: 13
 stack: ["nginx", "Docker", "Let's Encrypt / certbot", "PostgreSQL", "Redis", "ELK", "NCloud"]
 highlights:
   - "인프라 서버 · 애플리케이션 서버 2대 구성 관리 — 리버스 프록시, 컨테이너 배포, 로그 수집까지"

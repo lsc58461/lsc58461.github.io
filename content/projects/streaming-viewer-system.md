@@ -7,7 +7,7 @@ role: 프로토콜 분석 · 시스템 설계 · 구현 (외주)
 client: 비공개
 status: 납품 완료
 featured: false
-order: 2
+order: 23
 stack: ["Node.js", "Python", "네트워크 캡처", "프록시 인프라", "HLS/LL-HLS"]
 highlights:
   - "동시 시청자 카운트가 30초 주기 watch-event heartbeat의 고유 세션 수로 집계됨을 데이터로 확정 — 브라우저·HLS 다운로드 불필요"

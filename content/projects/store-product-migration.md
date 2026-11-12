@@ -6,8 +6,8 @@ year: "2026"
 role: 분석 · 이전 작업 (외주)
 client: 비공개
 status: 완료
-featured: false
-order: 29
+featured: true
+order: 2
 stack: ["Python", "patchright", "openpyxl", "html.parser", "Pillow"]
 highlights:
   - "운영 중인 스토어의 상품 1,014개를 새 스토어로 이전 — 일괄 수정 엑셀에 없는 상세설명은 상품마다 수집해 옮김"

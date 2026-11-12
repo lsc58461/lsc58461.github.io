@@ -7,7 +7,7 @@ role: 개발 (외주 · 다건)
 client: 비공개
 status: 납품 완료
 featured: false
-order: 9
+order: 25
 stack: ["Python", "customtkinter GUI", "Gemini API", "Cloudflare Turnstile 대응"]
 highlights:
   - "커스텀 백엔드의 로그인·CSRF·목록·댓글 등록 API 계약을 리버싱 (본문/댓글은 view 페이지 HTML 파싱)"

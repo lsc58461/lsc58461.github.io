@@ -7,7 +7,7 @@ role: 기획 · 개발 (개인 프로젝트)
 client: 개인 프로젝트
 status: 개발 완료
 featured: false
-order: 11
+order: 12
 stack: ["Electron", "Next.js 16", "Claude API (structured output)", "instagrapi"]
 highlights:
   - "폴더 선택만으로 README·docs·git log·코드량을 도시에(dossier)로 모아 슬라이드 원고를 LLM structured output으로 생성"

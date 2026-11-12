@@ -7,7 +7,7 @@ role: 기획 · 개발
 client: 비공개
 status: 개발 완료
 featured: true
-order: 4
+order: 3
 stack: ["Electron", "Next.js", "TypeScript", "sql.js (SQLite WASM)", "AES-256-GCM", "scrypt"]
 highlights:
   - "회원 · 포인트 충전 · 이용 기록 · 예약 달력 · 매출 · 부가세 계산을 인터넷 서버 없이 매장 PC에서 관리"

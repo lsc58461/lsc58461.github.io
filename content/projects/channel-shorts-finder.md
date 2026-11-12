@@ -7,7 +7,7 @@ role: 기획 · 개발 (외주)
 client: 비공개
 status: 납품 완료
 featured: false
-order: 23
+order: 16
 stack: ["Electron", "Next.js", "sql.js (WASM SQLite)", "YouTube Data API"]
 highlights:
   - "채널 수십 개의 쇼츠를 2년치까지 수집해 로컬 DB에 저장, 제목+설명 전문 검색·정렬"

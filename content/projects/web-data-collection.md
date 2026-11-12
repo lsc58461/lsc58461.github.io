@@ -7,7 +7,7 @@ role: 개발 (외주 · 다건)
 client: 비공개
 status: 납품 / 실측
 featured: false
-order: 12
+order: 7
 stack: ["Python", "requests / BeautifulSoup", "Serper.dev", "GraphQL", "openpyxl"]
 highlights:
   - "검색 SERP → 사이트 방문 → 이메일/연락처 추출 → 엑셀의 3단계 파이프라인 (난독화 이메일 복원 포함)"
