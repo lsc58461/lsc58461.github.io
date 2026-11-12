@@ -3,7 +3,7 @@ import { getProjectSlugs } from "@/lib/content";
 
 export const dynamic = "force-static";
 
-const BASE = "https://lsc58461.github.io";
+const BASE = "https://nixlab.pages.dev";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

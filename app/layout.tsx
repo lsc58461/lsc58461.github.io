@@ -18,12 +18,13 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lsc58461.github.io"),
+  metadataBase: new URL("https://nixlab.pages.dev"),
   title: {
     default: `${SITE.name} — ${SITE.role}`,
     template: `%s · ${SITE.name}`,
   },
   description: SITE.intro,
+  alternates: { canonical: "./" },
   verification: {
     google: "_ne51H1UeAol8BtqJliy8_nfswTff_rE7GtDejDqzzU",
   },
