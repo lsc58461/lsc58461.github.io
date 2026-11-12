@@ -30,6 +30,9 @@ export const metadata: Metadata = {
       "_ne51H1UeAol8BtqJliy8_nfswTff_rE7GtDejDqzzU", // lsc58461.github.io
       "UORrQi_iU-9h7DhoHhxHukEESZeI6kfCntgVR1QFLwg", // nixlab.pages.dev
     ],
+    other: {
+      "naver-site-verification": "d0c8f9eb4e04267f54c5f78734d53dee01d392b0",
+    },
   },
   openGraph: {
     title: `${SITE.brand} ${SITE.name} — ${SITE.role}`,
