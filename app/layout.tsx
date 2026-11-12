@@ -26,7 +26,10 @@ export const metadata: Metadata = {
   description: SITE.intro,
   alternates: { canonical: "./" },
   verification: {
-    google: "_ne51H1UeAol8BtqJliy8_nfswTff_rE7GtDejDqzzU",
+    google: [
+      "_ne51H1UeAol8BtqJliy8_nfswTff_rE7GtDejDqzzU", // lsc58461.github.io
+      "UORrQi_iU-9h7DhoHhxHukEESZeI6kfCntgVR1QFLwg", // nixlab.pages.dev
+    ],
   },
   openGraph: {
     title: `${SITE.name} — ${SITE.role}`,
